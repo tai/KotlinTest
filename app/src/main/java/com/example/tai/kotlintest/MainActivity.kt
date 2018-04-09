@@ -3,26 +3,37 @@ package com.example.tai.kotlintest
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.content.ContextCompat.startActivity
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.example.tai.kotlintest.R.id.textView
+import com.example.tai.kotlintest.SecondActivity.Companion.log
 
 import kotlinx.android.synthetic.main.activity_main.textView
 
+import java.util.logging.Logger
+
 class MainActivity : AppCompatActivity() {
+    companion object {
+        val log = Logger.getLogger(javaClass.enclosingClass.name)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        log.info("entered")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
     fun toastMe(view: View) {
+        log.info("entered")
         // val myToast = Toast.makeText(this, message, duration);
         val myToast = Toast.makeText(this, "Hello Toast!", Toast.LENGTH_SHORT)
         myToast.show()
     }
 
     fun countMe(view: View) {
+        log.info("entered")
         // old way without following:
         // import kotlinx.android.synthetic.main.activity_main.textView
         if (false) {
@@ -50,6 +61,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun randomMe(view: View) {
+        log.info("entered")
+
         // Create an Intent to start the second activity
         val randomIntent = Intent(this, SecondActivity::class.java)
 
