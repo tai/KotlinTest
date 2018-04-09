@@ -16,6 +16,7 @@ fun getTag() : String {
     return "(unknown)"
 }
 
+// TODO: Would be nice if I can delegate other calls to android.util.Log
 class Log {
     companion object {
         @JvmStatic
