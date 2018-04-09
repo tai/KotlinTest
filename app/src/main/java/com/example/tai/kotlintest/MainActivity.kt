@@ -8,17 +8,12 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.example.tai.kotlintest.R.id.textView
-import com.example.tai.kotlintest.SecondActivity.Companion.log
 
 import kotlinx.android.synthetic.main.activity_main.textView
 
-import java.util.logging.Logger
+import com.example.tai.kotlintest.Logging.Companion.log
 
 class MainActivity : AppCompatActivity() {
-    companion object {
-        val log = Logger.getLogger(javaClass.enclosingClass.name)
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         log.info("entered")
         super.onCreate(savedInstanceState)

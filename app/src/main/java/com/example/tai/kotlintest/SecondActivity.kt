@@ -6,14 +6,12 @@ import java.util.*
 
 import kotlinx.android.synthetic.main.activity_second.textview_label
 import kotlinx.android.synthetic.main.activity_second.textview_random
-import java.util.logging.Logger
 
+import com.example.tai.kotlintest.Logging.Companion.log
 
 class SecondActivity : AppCompatActivity() {
-
     companion object {
         const val TOTAL_COUNT = "total_count"
-        val log = Logger.getLogger(javaClass.enclosingClass.name)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
