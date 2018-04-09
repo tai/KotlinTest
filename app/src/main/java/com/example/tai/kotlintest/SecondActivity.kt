@@ -2,12 +2,11 @@ package com.example.tai.kotlintest
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import java.util.*
 
 import kotlinx.android.synthetic.main.activity_second.textview_label
 import kotlinx.android.synthetic.main.activity_second.textview_random
 
-import com.example.tai.kotlintest.Logging.Companion.log
+import java.util.Random
 
 class SecondActivity : AppCompatActivity() {
     companion object {
@@ -15,7 +14,7 @@ class SecondActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        log.info("entered")
+        Log.i("entered")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
@@ -24,7 +23,7 @@ class SecondActivity : AppCompatActivity() {
     }
 
     fun showRandomNumber() {
-        log.info("entered")
+        Log.i("entered")
         // Get the count from the intent extras
         val count = intent.getIntExtra(TOTAL_COUNT, 0)
 
